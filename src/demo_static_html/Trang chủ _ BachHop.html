@@ -1373,6 +1373,7 @@
             inset: auto 0 0 auto
         }
     </style>
+
 </head>
 
 <body class="breakpoint-xl b--desktop">
@@ -1605,6 +1606,13 @@
                 </div>
             </header>
             <!-- end: Header -->
+
+            <!-- Câu intro -->
+            <section id="section-intro" style="display: none;">
+                <div id="typewritter-container" class="text-center"></div>
+            </section>
+            <!-- End Câu intro -->
+
             <!-- Content -->
             <section id="page-content" class="pt-0 pl-1 pr-1">
                 <!-- post content -->
@@ -1619,7 +1627,9 @@
                             <!-- Sản phẩm bán chạy Slider -->
                             <div class="product-list-hot-sell">
                                 <div class="title">
-                                    <h4>SẢN PHẨM BÁN CHẠY</h4>
+                                    <h4
+                                        class="animate__animated animate__delay-1s animate__infinite animate__rubberBand">
+                                        SẢN PHẨM BÁN CHẠY</h4>
                                 </div>
                                 <div class="">
                                     <!-- Product-sliders -->
@@ -1946,7 +1956,10 @@
                                 <div class="row">
                                     <div class="col p-t-10">
                                         <div class="heading-text heading-gradient">
-                                            <h3><span>Hoa Sinh Nhật</span></h3>
+                                            <h3
+                                                class="animate__animated animate__delay-3s animate__infinite animate__flash">
+                                                <span>Hoa Sinh Nhật</span>
+                                            </h3>
                                         </div>
                                     </div>
                                 </div>
@@ -2646,7 +2659,7 @@
                     <div class="grid-readmore-container">
                         <div class="row">
                             <div class="col p-t-10">
-                                <div class="heading-text heading-gradient">
+                                <div class="heading-text heading-gradient" data-aos="fade-right">
                                     <h3><span>Hoa Khai Trương</span></h3>
                                 </div>
                             </div>
@@ -3036,7 +3049,8 @@
                             <!-- Xem thêm -->
                             <div class="text-middle text-center">
                                 <a href="https://nentang.vn/ecommerce/san-pham/chuyen-muc/hoa-khai-truong---23"
-                                    class="btn btn-outline btn-roundeded btn-readmore">Xem thêm Hoa Khai Trương</a>
+                                    class="btn btn-outline btn-roundeded btn-readmore animate__animated animate__delay-2s animate__fast animate__infinite animate__heartBeat">Xem
+                                    thêm Hoa Khai Trương</a>
                             </div>
                         </div>
                         <!--End: Product list-->
@@ -3711,6 +3725,43 @@
                     </section>
                     <!-- Đối tác -->
 
+                    <!-- Lý do nổi bật -->
+                    <div id="outstanding" class="row mb-4">
+                        <div class="col-md-4">
+                            <div class="card border-0 aos-init aos-animate" data-aos="slide-left"><img
+                                    class="card-img-top" src="./images/image-01.png" alt="">
+                                <div class="card-body text-center">
+                                    <h3 class="card-title font-weight-bold">Tư vấn và Thiết kế</h3>
+                                    <p class="card-text">Khách hàng đặt hàng tại shop hoa Neta Flower sẽ được tư vấn
+                                        nhiệt tình, đến khi vừa lòng khách hàng nhất.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-0 aos-init aos-animate" data-aos="slide-up"><img
+                                    class="card-img-top" src="./images/image-02.png" alt="">
+                                <div class="card-body text-center">
+                                    <h3 class="card-title font-weight-bold">Giá thành tốt nhất</h3>
+                                    <p class="card-text">Chúng tôi xin đảm bảo sẽ phục vụ với giá cả ưu đãi, nhiều
+                                        khuyến mãi hấp dẫn nhất.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-0 aos-init aos-animate" data-aos="slide-right"><img
+                                    class="card-img-top" src="./images/image-03.png" alt="">
+                                <div class="card-body text-center">
+                                    <h3 class="card-title font-weight-bold">Giao hàng tận nơi</h3>
+                                    <p class="card-text">Hỗ trợ dịch vụ giao hàng tận nơi trong phạm vi bán kính 10km
+                                        nội thành Cần Thơ, hỗ
+                                        trợ giao hàng khách hàng ngoại tỉnh.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Lý do nổi bật -->
+
+
 
                     <!-- Testimonials -->
                     <section>
@@ -4196,6 +4247,50 @@
     </div>
 
 
+
+    <!-- DEMO Custom 1: Animate CSS -->
+    <link href="vendors/animate-css/animate.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- DEMO Custom 2: Animate on scroll -->
+    <link href="vendors/aos/aos.css" type="text/css" rel="stylesheet" />
+    <script src="vendors/aos/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- DEMO Custom 3: Typewritter JS -->
+    <script src="vendors/typewritter/core.js"></script>
+    <script>
+        $('#section-intro').css("font-size", "3rem");
+        $('#section-intro').css("line-height", "1.2");
+        $('#section-intro').show();
+        var appTw = document.getElementById('typewritter-container');
+
+        var typewriter = new Typewriter(appTw, {
+            loop: true,
+            delay: 75,
+        });
+
+        typewriter
+            .pauseFor(1000)
+            .typeString('Thiết kế <span style="font-weight: bold; text-decoration: underline;">Frontend</span> là một trong những công việc <br />')
+            .pauseFor(300)
+            .typeString('<strong style="font-size: 3rem;">Nhàm chán?</strong>')
+            .pauseFor(3000)
+            .deleteChars(10)
+            .typeString('<strong style="color: red;">Không hề nhé!!!</strong>')
+            .pauseFor(3000)
+            .deleteChars(15)
+            .typeString('<strong><span style="color: #27ae60;">Thú vị 💜</span></strong>')
+            .pauseFor(3000)
+            .deleteChars(9)
+            .typeString('<strong><span style="color: #a581ea;">Sáng tạo 💙</span></strong>')
+            .pauseFor(3000)
+            .deleteChars(11)
+            .typeString('<strong><span style="color: #125c9e;">Đầy màu sắc 💖</span></strong>')
+            .pauseFor(10000)
+            .start();
+    </script>
 </body>
 
 </html>
