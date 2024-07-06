@@ -3798,6 +3798,73 @@
                             <!-- end: Testimonials -->
                         </div>
                     </section>
+
+                    <!-- Liên hệ -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Gởi lời nhắn đến Chúng tôi 💜💜💙💙💖💖</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form class="form-horizontal" method="post"
+                                            action="#" novalidate="">
+                                            <input type="hidden" name="_token"
+                                                value="n8JHkynEBYzpbHafkcRlrbBq3P4d3at5WRUlqSpD">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <input type="text" name="name" class="form-control"
+                                                                placeholder="Họ tên của bạn" required=""
+                                                                data-validation-required-message="Vui lòng nhập Họ tên"
+                                                                autofocus="autofocus" aria-invalid="false">
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <input type="email" name="email" class="form-control"
+                                                                placeholder="Địa chỉ Email của bạn" required=""
+                                                                data-validation-required-message="Vui lòng nhập Địa chỉ Email">
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <input type="text" name="phone" class="form-control"
+                                                                placeholder="Số điện thoại" required=""
+                                                                data-validation-required-message="Vui lòng để lại số điện thoại để chúng tôi tiện liên hệ">
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <textarea id="messageEditor" name="message"
+                                                                class="form-control" placeholder="Nhập lời nhắn của bạn"
+                                                                rows="10" required=""
+                                                                data-validation-required-message="Vui lòng nhập lời nhắn của bạn. Sau khi nhận được thông tin, chúng tôi sẽ liên hệ lại bạn trong thời gian sớm nhất."></textarea>
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Gởi lời nhắn 🚀</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Liên hệ -->
+
                     <div class="row">
                         <div class="col-3">
                         </div>
@@ -4290,6 +4357,17 @@
             .typeString('<strong><span style="color: #125c9e;">Đầy màu sắc 💖</span></strong>')
             .pauseFor(10000)
             .start();
+    </script>
+
+    <!-- DEMO Custom 4: TINYMCE -->
+    <script src="./vendors/tinymce/js/tinymce/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: '#messageEditor',
+            license_key: 'gpl',
+            plugins: 'lists, media, image',
+            toolbar: 'numlist bullist media image'
+        });
     </script>
 </body>
 
